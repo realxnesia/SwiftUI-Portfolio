@@ -51,7 +51,7 @@ struct Home: View {
                             .foregroundColor(Color.white)
                             .cornerRadius(10)
                         
-                        Text("New Feature")
+                        Text("Custom Navigation Youtube")
                     }
                 }
                 
