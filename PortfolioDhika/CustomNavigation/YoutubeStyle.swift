@@ -16,14 +16,17 @@ struct YoutubeStyle: View {
 struct YoutubeStyle_Previews: PreviewProvider {
     static var previews: some View {
         YoutubeStyle()
+            .previewDevice("iPhone 12")
     }
 }
 
 struct YoutubeCustom: View {
     var body: some View {
         NavigationView{
-            Text("Content in here")
-            //MARK: Navigation Bar
+            //Text("Content in here")
+            ListContentView()
+            
+                //MARK: Navigation Bar
                 .navigationBarItems(
                 leading:
                     HStack{
@@ -63,7 +66,141 @@ struct YoutubeCustom: View {
 
                     }
             )
+                .navigationBarTitle("", displayMode: .inline) //Biar dia pendek dan berwarna abu-abu
+        }
+        .navigationViewStyle(StackNavigationViewStyle()) //tujuannya biar di ipad dia tetp muncul
+        
+        
+    }
+}
+
+struct ListContentView : View{
+    var body : some View{
+        List{
+            VStack{
+                //MARK: Thumbnail + Time Bottom Trailing
+                ZStack(alignment: .bottomTrailing){
+                    Image("Thumbnail1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                    
+                    Text("10:30")
+                        //Ukuran
+                        .padding(.all, 5)
+                        .cornerRadius(5)
+                        
+                        //Latar Belakang
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        .background(Color.black)
+                    
+                        //Tata Letak
+                        .padding(.bottom, 5)
+                        .padding(.trailing, 5)
+
+                }
+                
+                //MARK: Detail
+                HStack(spacing: 15){
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                    
+                    //Tittle
+                    VStack(alignment: .leading){
+                        Text("Membuat Kopi Gayo #1").font(.headline)
+                        Text("Disini kita belajar cara membuat kopi gayo yang nikmat").font(.caption)
+                    }
+                    Image(systemName: "list.bullet")
+                    
+                    
+                }
+            }
             
+            
+            
+            VStack{
+                //MARK: Thumbnail + Time Bottom Trailing
+                ZStack(alignment: .bottomTrailing){
+                    Image("Thumbnail2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                    
+                    Text("10:30")
+                        //Ukuran
+                        .padding(.all, 5)
+                        .cornerRadius(5)
+                        
+                        //Latar Belakang
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        .background(Color.black)
+                    
+                        //Tata Letak
+                        .padding(.bottom, 5)
+                        .padding(.trailing, 5)
+
+                }
+                
+                //MARK: Detail
+                HStack(spacing: 15){
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                    
+                    //Tittle
+                    VStack(alignment: .leading){
+                        Text("Membuat Kopi Gayo #1").font(.headline)
+                        Text("Disini kita belajar cara membuat kopi gayo yang nikmat").font(.caption)
+                    }
+                    Image(systemName: "list.bullet")
+                    
+                    
+                }
+            }
+            
+            VStack{
+                //MARK: Thumbnail + Time Bottom Trailing
+                ZStack(alignment: .bottomTrailing){
+                    Image("Thumbnail1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                    
+                    Text("10:30")
+                        //Ukuran
+                        .padding(.all, 5)
+                        .cornerRadius(5)
+                        
+                        //Latar Belakang
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        .background(Color.black)
+                    
+                        //Tata Letak
+                        .padding(.bottom, 5)
+                        .padding(.trailing, 5)
+
+                }
+                
+                //MARK: Detail
+                HStack(spacing: 15){
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                    
+                    //Tittle
+                    VStack(alignment: .leading){
+                        Text("Membuat Kopi Gayo #1").font(.headline)
+                        Text("Disini kita belajar cara membuat kopi gayo yang nikmat").font(.caption)
+                    }
+                    Image(systemName: "list.bullet")
+                    
+                    
+                }
+            }
             
         }
     }
