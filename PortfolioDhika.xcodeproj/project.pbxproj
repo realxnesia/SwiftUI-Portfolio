@@ -14,6 +14,7 @@
 		70E5B9A126B6A77600047E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E5B9A026B6A77600047E97 /* Assets.xcassets */; };
 		70E5B9A426B6A77600047E97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E5B9A326B6A77600047E97 /* Preview Assets.xcassets */; };
 		70E5B9A726B6A77600047E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E5B9A526B6A77600047E97 /* LaunchScreen.storyboard */; };
+		70E5B9B526B6A94700047E97 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5B9B426B6A94700047E97 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		70E5B9A326B6A77600047E97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70E5B9A626B6A77600047E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70E5B9A826B6A77600047E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E5B9B426B6A94700047E97 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		70E5B99626B6A77500047E97 /* PortfolioDhika */ = {
 			isa = PBXGroup;
 			children = (
+				70E5B9B226B6A8F600047E97 /* Home */,
 				70E5B99726B6A77500047E97 /* AppDelegate.swift */,
 				70E5B99926B6A77500047E97 /* SceneDelegate.swift */,
 				70E5B99B26B6A77500047E97 /* ContentView.swift */,
@@ -76,6 +79,22 @@
 				70E5B9A326B6A77600047E97 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70E5B9B226B6A8F600047E97 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70E5B9B326B6A90200047E97 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		70E5B9B326B6A90200047E97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70E5B9B426B6A94700047E97 /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +169,7 @@
 			files = (
 				70E5B99826B6A77500047E97 /* AppDelegate.swift in Sources */,
 				70E5B99A26B6A77500047E97 /* SceneDelegate.swift in Sources */,
+				70E5B9B526B6A94700047E97 /* Home.swift in Sources */,
 				70E5B99F26B6A77500047E97 /* PortfolioDhika.xcdatamodeld in Sources */,
 				70E5B99C26B6A77500047E97 /* ContentView.swift in Sources */,
 			);
