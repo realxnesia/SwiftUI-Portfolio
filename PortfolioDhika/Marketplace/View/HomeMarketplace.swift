@@ -9,7 +9,34 @@ import SwiftUI
 
 struct HomeMarketplace: View {
     var body: some View {
-        Produk()
+        //Produk()
+        NavigationView{
+            ScrollView{
+                //Looping Semua Data
+                ForEach(Data){ row in
+                    VStack(spacing: 10){
+                        Produk(loadData: row)
+                    }
+                    .padding()
+                }
+            }
+            .navigationBarTitle("Collection Book")
+            .navigationBarItems(
+            trailing:
+                HStack(spacing: 15){
+                    Button(action: {print()}){
+                        Image(systemName: "person.fill")
+                    }
+                    
+                    Button(action: {print()}){
+                        Image(systemName: "cart.fill")
+                    }
+                }
+            
+            )
+        }
+        .accentColor(Color.secondary)
+        .navigationViewStyle(StackNavigationViewStyle()) //Mengatasi ketika landscape tidak kelihatan
     }
 }
 
@@ -20,10 +47,12 @@ struct HomeMarketplace_Previews: PreviewProvider {
 }
 
 struct Produk: View {
+    let loadData : Structure
+    
     var body: some View {
         VStack(alignment: .leading){
             ZStack(alignment: .topTrailing){
-                Image("book1")
+                Image(loadData.fotoProduk)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 300)
@@ -35,12 +64,12 @@ struct Produk: View {
                         .foregroundColor(Color.red)
                 }
             }
-            Text("Harry Potter Book Series")
+            Text(loadData.namaProduk)
                 .font(.title)
                 .bold()
                 .padding(.leading)
                 .padding(.trailing)
-            Text("Rp. 2000")
+            Text(loadData.hargaProduk)
                 .font(.title)
                 .foregroundColor(Color.red)
                 .bold()
@@ -49,13 +78,17 @@ struct Produk: View {
             
             HStack{
                 Image(systemName: "mappin.circle")
-                Text("DKI Jakarta")
+                Text(loadData.lokasi)
             }
             .padding(.leading)
             .padding(.trailing)
             
             HStack{
                 HStack{
+                    
+                    ForEach(0..<loadData.ratingCount){
+                        items in
+                    }
                     Image(systemName: "star.fill").foregroundColor(Color.yellow)
                 }
             }
